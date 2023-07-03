@@ -7,8 +7,6 @@ import MenuContextProvider from './Helpers/menuContext';
 import { Provider } from 'react-redux';
 import { store } from './Store';
 
-
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

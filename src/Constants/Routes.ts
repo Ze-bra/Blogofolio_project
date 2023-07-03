@@ -1,7 +1,6 @@
 export const RoutesConstants = {
     Post: "post/:id",
     AddPost: "addPost",
-    EditPost: "posts/edit/:id",
     PostsIndex: "/",
     PostsMy: "/myposts",
     PostsSearch: "/search",

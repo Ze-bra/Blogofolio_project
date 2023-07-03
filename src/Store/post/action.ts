@@ -2,7 +2,17 @@ import { AppThunk } from '..'
 import { createPost, getAllPosts } from "../../Services/PostServise"
 import { PostType } from '../../Types/Post'
 import { ResponseErrors } from '../../Types/ResponseError1'
-import { PostListType, RegistrationActionName } from './types'
+import { PostListType} from './types'
+
+export const RegistrationActionName = {
+  SET_SEARCH_VALUE: "SET_SEARCH_VALUE",  
+  SET_PAGE_VALUE: "SET_PAGE_VALUE",  
+  SET_LIST_TYPE_VALUE: "SET_LIST_TYPE_VALUE",  
+  LOAD_POSTS: "LOAD_POSTS",  
+  CLEAR_SEARCH: "CLEAR_SEARCH",  
+  LOAD_POSTS_FAILED: "LOAD_POSTS_FAILED",
+  ADD_POST_FAIL: "ADD_POST_FAIL"  
+} as const
 
 const loadPostsAction = (): AppThunk => {
   return (dispatch, getState) => {

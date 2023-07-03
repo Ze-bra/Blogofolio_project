@@ -18,7 +18,7 @@ const PostPage = () => {
   useEffect(() => {
     getPost(params.id)
       .then(post => setPost(post))
-  })
+  }, [])
 
   return (
     <FormLayout

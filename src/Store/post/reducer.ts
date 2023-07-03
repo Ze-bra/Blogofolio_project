@@ -1,6 +1,7 @@
 import { PostPageType } from '../../Types/Post';
 import { ResponseErrors } from '../../Types/ResponseError1';
-import { PostActionType, PostListType, RegistrationActionName } from './types';
+import { PostActionType, PostListType} from './types';
+import { RegistrationActionName } from '../post/action';
 
 const initialValue: PostPageType = {
   search: '',

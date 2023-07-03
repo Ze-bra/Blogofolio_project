@@ -18,6 +18,7 @@ const CardFooter = (props: CardFooterType) => {
       x,
       { dislikes: Math.floor(Math.random() * (1000 - 2)) + 2 }))
   }
+
   const likeOnClick = () => {
     setValue(x => Object.assign({},
       x,

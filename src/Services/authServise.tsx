@@ -1,5 +1,6 @@
 const authBaseUrl = 'https://studapi.teachmeskills.by/auth/';
 
+//регистрация
 export const Registration = async (username: string, email: string, password: string) => {
     const url = (`${authBaseUrl}users/`)
     const option = {
@@ -33,6 +34,7 @@ export const Registration = async (username: string, email: string, password: st
     }
 }
 
+//активация после регистрации
 export const Activation = async (uid: string, token: string) => {
     const url = (`${authBaseUrl}/users/activation/`)
     const option = {
@@ -63,6 +65,7 @@ export const Activation = async (uid: string, token: string) => {
         }
     }
 }
+
 
 export const Login = async (email: string, password: string) => {
     const url = (`${authBaseUrl}/jwt/create`)
@@ -96,6 +99,7 @@ export const Login = async (email: string, password: string) => {
     }
 }
 
+//получаю новый access token используя refresh 
 export const RefreshTocken = async (refresh: string) => {
     const url = (`${authBaseUrl}jwt/refresh`)
     const option = {
@@ -127,6 +131,7 @@ export const RefreshTocken = async (refresh: string) => {
     }
 }
 
+// получение данных о рользователе
 export const GetUserName = async (token: string | undefined) => {
     const url = (`${authBaseUrl}/users/me/`)
     const option = {

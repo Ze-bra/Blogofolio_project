@@ -2,7 +2,6 @@ import styles from "./styles.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
 import { Outlet } from "react-router-dom";
-import Menu from "../Header/Menu";
 import AsideMenu from "../AsideMenu";
 
 const Layout = () => {
@@ -10,7 +9,6 @@ const Layout = () => {
 
     <div className={styles.app}>
       <Header />
-      {/* <Menu /> */}
       <div className={styles.content}>
         <Outlet />
       </div>

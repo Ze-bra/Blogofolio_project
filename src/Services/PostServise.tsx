@@ -23,6 +23,9 @@ export const getAllPosts = async (
         endpoint = `${endpoint}/my_posts/`
     }
 
+    if (postListType === 'allPosts') {
+        offset = offset - 1;
+    }
     let headers = {};
     if (token) {
         headers = {
@@ -41,7 +44,6 @@ export const getAllPosts = async (
     const result = await responce.json()
     return result as PostPageType
 }
-
 
 export const createPost = async (
     form: PostType, image: File | string, token?: string
@@ -78,5 +80,4 @@ export const createPost = async (
             data: error.message
         }
     }
-
 }
